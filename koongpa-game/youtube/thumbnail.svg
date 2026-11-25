@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="shade" x2="0" y2="1">
+      <stop stop-color="#11152c" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#11152c" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="title" x2="0" y2="1">
+      <stop stop-color="#fff3ba"/>
+      <stop offset="1" stop-color="#ffb951"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <image href="../assets/processed/stage_rooftop.png" width="1280" height="720" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1280" height="720" fill="url(#shade)"/>
+  <circle cx="970" cy="340" r="290" fill="#55dded" opacity=".18" filter="url(#glow)"/>
+  <image href="../assets/processed/power.png" x="665" y="52" width="430" height="620" preserveAspectRatio="xMidYMax meet"/>
+  <image href="../assets/processed/rival.png" x="980" y="205" width="255" height="455" preserveAspectRatio="xMidYMax meet"/>
+  <g font-family="Arial, sans-serif" font-weight="900">
+    <text x="72" y="110" fill="#69e8ef" font-size="24" letter-spacing="7">ORIGINAL ARCADE BRAWLER</text>
+    <text x="62" y="265" fill="#10142d" stroke="#10142d" stroke-width="18" font-size="118" letter-spacing="-5">DNA</text>
+    <text x="56" y="258" fill="url(#title)" stroke="#fff5d5" stroke-width="2" font-size="118" letter-spacing="-5">DNA</text>
+    <text x="62" y="377" fill="#10142d" stroke="#10142d" stroke-width="18" font-size="94" letter-spacing="-5">RUMBLE</text>
+    <text x="56" y="370" fill="#ff8bb8" stroke="#fff2d5" stroke-width="2" font-size="94" letter-spacing="-5">RUMBLE</text>
+    <text x="72" y="430" fill="#fff1d5" font-size="26" letter-spacing="1">히어로 DNA를 깨워라!</text>
+    <text x="78" y="603" fill="#ff6972" font-size="17" letter-spacing="2">POWER</text>
+    <text x="207" y="603" fill="#6cb3ff" font-size="17" letter-spacing="2">SPEED</text>
+    <text x="325" y="603" fill="#ffdc69" font-size="17" letter-spacing="2">BALANCE</text>
+    <text x="74" y="657" fill="#bdc7ee" font-size="14" letter-spacing="3">COMBO · TRANSFORM · FIGHT!</text>
+  </g>
+  <path d="m603 251 12-31 13 31 30 12-30 12-13 31-12-31-31-12z" fill="#fff09b" filter="url(#glow)"/>
+</svg>

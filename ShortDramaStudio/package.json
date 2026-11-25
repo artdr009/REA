@@ -1,0 +1,55 @@
+{
+  "name": "rea-short-drama-studio",
+  "productName": "REA Short Drama Studio",
+  "version": "1.0.0",
+  "description": "Offline-first short drama planning and storyboarding studio",
+  "author": "REA",
+  "license": "MIT",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "typecheck": "tsc --noEmit",
+    "build": "electron-vite build",
+    "dist": "npm run build && electron-builder --win portable"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  },
+  "build": {
+    "appId": "com.rea.shortdramastudio",
+    "productName": "REA Short Drama Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "REA-Short-Drama-Studio-1.0.0-win-x64.${ext}"
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}

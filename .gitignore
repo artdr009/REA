@@ -1,0 +1,9 @@
+node_modules
+*.exe
+phaser.json
+release/
+win-unpacked/
+dist/
+.venv/
+ShortDramaStudio/release/
+ShortDramaStudio/node_modules/

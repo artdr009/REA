@@ -1,0 +1,64 @@
+{
+  "name": "capcut-clone",
+  "productName": "CapCutClone",
+  "version": "1.0.0",
+  "description": "캡컷 스타일 PC 영상 편집기 (Electron + React + ffmpeg)",
+  "author": "rea",
+  "license": "MIT",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "typecheck": "tsc --noEmit",
+    "build": "electron-vite build",
+    "prepare:resources": "node scripts/prepare-resources.js",
+    "dist": "npm run prepare:resources && electron-vite build && electron-builder --win",
+    "smoke": "electron-vite build && electron . --smoke"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.1.0",
+    "ffmpeg-static": "^5.2.0",
+    "png-to-ico": "^2.1.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "zustand": "^5.0.2"
+  },
+  "build": {
+    "appId": "com.rea.capcutclone",
+    "productName": "CapCutClone",
+    "directories": {
+      "output": "release",
+      "buildResources": "resources"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "extraResources": [
+      {
+        "from": "resources/ffmpeg.exe",
+        "to": "ffmpeg.exe"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "resources/icon.ico",
+      "artifactName": "CapCutClone-1.0.0-win-x64.${ext}"
+    }
+  }
+}

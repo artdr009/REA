@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #171226 0%, #0a0812 100%);
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game {
+  background: #000;
+  box-shadow: 0 0 60px rgba(255, 110, 40, 0.25), 0 0 4px rgba(0,0,0,.8);
+  border-radius: 4px;
+  outline: none;
+  cursor: default;
+}
